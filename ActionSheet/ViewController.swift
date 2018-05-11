@@ -15,11 +15,30 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
+    @IBAction func action(_ sender: Any) {
+        
+        let option = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .actionSheet)
+        let delete = UIAlertAction(title: "Delete", style: .default, handler: {
+            (alert: UIAlertAction)-> Void in
+        })
+        
+        let save = UIAlertAction(title: "Save", style: .default, handler: {
+            (alert: UIAlertAction)-> Void in
+        })
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+            (alert: UIAlertAction)-> Void in
+        })
+        
+        option.addAction(delete)
+        option.addAction(save)
+        option.addAction(cancel)
+        self.present(option, animated: true, completion: nil)
+        
+    }
+    
 
 }
+
 
